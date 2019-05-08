@@ -60,17 +60,32 @@ $(".btn-reinicio").click(function() {
     i++;
 
     document.getElementById("movimientos-text").innerHTML = i;
-})
+});
 
-// // Evento para caramelos aleatorios
-
+// Funcion drag &drop 
 $(function() {
     $("[class^='col-']").sortable();
     $("[class^='col-']").disableSelection();
 });
-//
+// Evento para caramelos aleatorios
 
 $(document).ready(function() {
     tituloBlanco();
+
+    var images = [
+        "./image/1.png",
+        "./image/2.png",
+        "./image/3.png",
+        "./image/4.png",
+    ]
+    var columnas = $(".panel-tablero div");
+
+    for (var i = 0; i < columnas.length; i++) {
+        for (var j = 0; j < 7; j++) {
+            var img = Math.floor(Math.random() * (4 - 1 + 1));
+            $(columnas[i]).append("<img src='" + images[img] +
+                "' class='elemento' width='100px' height='100px'>");
+        }
+    }
 
 });
