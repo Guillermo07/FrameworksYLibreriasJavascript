@@ -7,6 +7,14 @@
  *   $('.timer').startTimer();
  *
  */
+// Funcion para terminar el juego y mostrar los resultados
+function juegoTerminado() {
+    $('.panel-tablero').hide(1500);
+    $(".panel-score").animate({
+        width: "90%"
+    }, 1500);
+    $('.time').hide(1500);
+};
 
 (function(factory) {
     // Using as a CommonJS module

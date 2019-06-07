@@ -19,8 +19,6 @@ $(document).ready(function() {
             });
     }
 
-    // Evento para cambiar el texto dentro del boton reinicio e iniciar el juego
-
     var busquedaHorizontal = 0;
     var busquedaVertical = 0;
     var buscarNuevosDulces = 0;
@@ -254,14 +252,5 @@ $(document).ready(function() {
         contadorTotal = contadorTotal - 1;
     };
 
-    // Funcion para terminar el juego y mostrar los resultados
-
-    function juegoTerminado() {
-        $('.panel-tablero').hide(1500);
-        $(".panel-score").animate({
-            width: "90%"
-        }, 1500);
-        $('.time').hide(1500);
-    };
 
 });
